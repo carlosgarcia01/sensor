@@ -5,13 +5,19 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { LoginComponent } from './login/login.component';
 
+
+import {NativeScriptFormsModule} from 'nativescript-angular/forms';
+import {NativeScriptHttpClientModule} from 'nativescript-angular/http-client';
+
 @NgModule({
     bootstrap: [
         AppComponent
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        AppRoutingModule,
+        NativeScriptFormsModule,
+        NativeScriptHttpClientModule
     ],
     declarations: [
         AppComponent,
