@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../models/User';
 import {RouterExtensions} from 'nativescript-angular/router';
+import {LoginService} from "../shared/login.service";
 
 @Component({
   selector: 'ns-login',
@@ -12,7 +13,7 @@ export class LoginComponent  {
   user: User;
 
 
-  constructor(private router:RouterExtensions) {
+  constructor(private router:RouterExtensions, private loginService : LoginService) {
       this.user = new User();
   }
 
@@ -28,12 +29,21 @@ export class LoginComponent  {
           this.alert("Please provide both an email address and password.");
           return;
       } else
-        this.router.navigate(['/home',{clearHistory:true}]);
+        this.loginService.authenticate({email: this.user.email , password: this.user.password}).subscribe((result)=>{
+
+          console.log(result);
+          this.router.navigate(['/home',{clearHistory:true}]);
+      
+        }, (error) => {
+          
+          this.alert(error.error.message);
+        }
+        )
   }
 
   alert(message: string) {
       return alert({
-          title: "APP NAME",
+          title: "Error",
           okButtonText: "OK",
           message: message
       });

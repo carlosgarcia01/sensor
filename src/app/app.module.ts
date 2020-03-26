@@ -7,7 +7,11 @@ import { LoginComponent } from './login/login.component';
 
 
 import {NativeScriptFormsModule} from 'nativescript-angular/forms';
-import {NativeScriptHttpClientModule} from 'nativescript-angular/http-client';
+
+
+ // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper 
+ import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
+
 
 @NgModule({
     bootstrap: [
