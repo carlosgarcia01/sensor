@@ -31,8 +31,10 @@ export class HomeComponent implements OnInit {
 
 
         this._penaltyfeeService.getPenaltyfee()
-            .subscribe((result:any) =>
-                        this.penaltyfees=result.penaltyfees)
+            .subscribe((result:any) =>{
+                console.log(result);
+                this.penaltyfees=result.penaltyfees
+            })
         
     }
 
