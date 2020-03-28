@@ -2,7 +2,7 @@ export class Penaltyfee {
         price:Number;
         date?:Number;
         vehicleplate:string;
-        personId:string;
+        personId?:string;
 
         constructor(){
             this.date= Date.now();
