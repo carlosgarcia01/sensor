@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
     }
 
     usuarios : Array<User>;
-    penaltyfee:Array<string>;
+    penaltyfees:Array<string>;
 
     ngOnInit(): void {
         // Init your component properties here.
@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
 
         this._penaltyfeeService.getPenaltyfee()
             .subscribe((result:any) =>
-                        this.penaltyfee=result.penaltyfees)
+                        this.penaltyfees=result.penaltyfees)
         
     }
 

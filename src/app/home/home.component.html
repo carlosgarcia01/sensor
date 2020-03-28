@@ -4,15 +4,12 @@
 
 <GridLayout>
 
-    <ListView [items]= "Users" >
-        <ng-template let-item= "user">
+    <ListView [items]= "penaltyfees" >
+        <ng-template let-item= "penaltyfee">
             <StackLayout>
-                <label [text]="user.document" ></label>
-                <label [text]="user.name" ></label>
-                <label [text]="user.lastname" ></label>
-                <label [text]="user.contact" ></label>
-                <label [text]="user.occupation" ></label>
-                <label [text]="user.email" ></label>
+                <label [text]="penaltyfee.price" ></label>
+                <label [text]="penaltyfee.date" ></label>
+                <label [text]="penaltyfee.vehicleplate" ></label>
             </StackLayout>
         </ng-template>
     </ListView>
