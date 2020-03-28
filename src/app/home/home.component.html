@@ -5,11 +5,21 @@
 <GridLayout>
 
     <ListView [items]= "penaltyfees" >
-        <ng-template let-item= "item">
+        <ng-template let-Penaltyfee= "Penaltyfee">
+            <GridLayout>
+                <Label text="Name:"></Label>
+                <Label [text]="Penaltyfee.name"></Label>
+
+                <Label text="Price:"></Label>
+                <label [text]="Penaltyfee.price" ></label>
+
+                <Label text="Date:"></Label>
+                <label [text]="Penaltyfee.date" ></label>
+
+                <Label text="Vehicleplate:"></Label>
+                <label [text]="Penaltyfee.vehicleplate" ></label>
+            </GridLayout>
             <StackLayout>
-                <label [text]="item.price" ></label>
-                <label [text]="item.date" ></label>
-                <label [text]="item.vehicleplate" ></label>
             </StackLayout>
         </ng-template>
     </ListView>
