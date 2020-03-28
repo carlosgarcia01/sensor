@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {User} from '../models/User';
 import {RouterExtensions} from 'nativescript-angular/router';
 import {LoginService} from "../shared/login.service";
+import {setString} from "tns-core-modules/application-settings";
 
 @Component({
   selector: 'ns-login',
@@ -29,9 +30,13 @@ export class LoginComponent  {
           this.alert("Please provide both an email address and password.");
           return;
       } else
-        this.loginService.authenticate({email: this.user.email , password: this.user.password}).subscribe((result)=>{
+        this.loginService.authenticate({email: this.user.email , password: this.user.password})
+        .subscribe((result : any)=>{
 
           console.log(result);
+
+          setString("token",result.token.accessToken);
+
           this.router.navigate(['/home',{clearHistory:true}]);
       
         }, (error) => {

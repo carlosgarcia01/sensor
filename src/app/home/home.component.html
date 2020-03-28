@@ -1,9 +1,25 @@
 <ActionBar>
-    <Label text="Home"></Label>
+    <Label text="Análisis Usuarios"></Label>
 </ActionBar>
 
 <GridLayout>
 
+    <ListView [items]= "Users" >
+        <ng-template let-item= "user">
+            <StackLayout>
+                <label [text]="user.document" ></label>
+                <label [text]="user.name" ></label>
+                <label [text]="user.lastname" ></label>
+                <label [text]="user.contact" ></label>
+                <label [text]="user.occupation" ></label>
+                <label [text]="user.email" ></label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+
+
+
     <button text="Logout" class="btn btn-primary" (tap)="exit()"></button>
-    <!-- Add your page content here -->
+    
+
 </GridLayout>
