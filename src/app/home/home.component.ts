@@ -3,6 +3,7 @@ import {RouterExtensions} from 'nativescript-angular/router';
 import {User} from "../../app/models/User";
 import {UserService} from "../../app/shared/user.service";
 import {PenaltyfeeService} from "../../app/shared/penaltyfee.service";
+import { clear } from "tns-core-modules/application-settings";
 
 
 
@@ -40,6 +41,7 @@ export class HomeComponent implements OnInit {
 
 
     exit(){
+        clear();
         this.router.navigate(['/login'],{clearHistory:true});
     }
 }

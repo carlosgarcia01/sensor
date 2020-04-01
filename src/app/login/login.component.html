@@ -1,7 +1,7 @@
 <FlexboxLayout class="page">
     <StackLayout class="form">
-        <Image class="logo" src="~/app/img/homero.png"></Image>
-        <Label class="header" text="Login"></Label>
+        <Image class="logo" src="~/app/img/velocidad.png" loadMode="async" stretch="aspectFit"></Image>
+        <Label class="header" text="SENSOR"></Label>
 
             <GridLayout rows="auto, auto">
                 <StackLayout row="0" class="input-field">
@@ -17,10 +17,10 @@
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
 
-                
+                <ActivityIndicator rowspan="2" [busy]="isBusy" color="#365a95" width="100" height="100" (busyChange)="onBusyChanged($event)"></ActivityIndicator>
             </GridLayout>
 
-        <Button text="Login" (tap)="submit()"  class="-outline -rounded-lg m-t-20"></Button>
+        <Button [isEnabled]="!isBusy" text="Login" (tap)="submit()"  class="-outline -rounded-lg m-t-20"></Button>
         
     </StackLayout>
 

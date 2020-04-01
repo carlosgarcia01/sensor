@@ -1,5 +1,12 @@
-<ActionBar>
-    <Label text="Análisis Usuarios"></Label>
+<ActionBar title="Análisis Usuarios">
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap) ="exit()"></NavigationButton>
+
+    <ActionItem
+    android.systemIcon="ic_menu_camera" 
+    ios.position="right"
+    android.position="right"
+    (tap) ="exit()" text="Exit">
+    </ActionItem>
 </ActionBar>
 
 <GridLayout>
@@ -21,7 +28,6 @@
                 <label [text]="item.vehicleplate" ></label>
 
                 
-                <button text="Logout" class="btn btn-primary" (tap)="exit()"></button>
             </StackLayout>
             
             </GridLayout>
