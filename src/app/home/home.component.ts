@@ -44,4 +44,8 @@ export class HomeComponent implements OnInit {
         clear();
         this.router.navigate(['/login'],{clearHistory:true});
     }
+
+    useCamera(){
+        this.router.navigate(['/camera'],{clearHistory:true}); 
+    }
 }
