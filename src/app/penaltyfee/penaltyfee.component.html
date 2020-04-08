@@ -1,0 +1,53 @@
+<FlexboxLayout class="page">
+    <StackLayout class="form">
+        <Label class="header" text="SENSOR"></Label>
+
+            <GridLayout rows="auto, auto,auto,auto,auto">
+                <StackLayout row="0" class="input-field">
+                    <Label text="Name" textWrap="true"></Label>
+                    <TextField class="input" 
+                         autocorrect="false"
+                        autocapitalizationType="none" ></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+                <StackLayout row="1" class="input-field">
+                    <Label text="Last Name" textWrap="true"></Label>
+                    <TextField class="input" 
+                         autocorrect="false"
+                        autocapitalizationType="none" ></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+                <StackLayout row="2" class="input-field">
+                    <Label text="Document" textWrap="true"></Label>
+                    <TextField class="input" 
+                         autocorrect="false"
+                        autocapitalizationType="none" ></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+                <StackLayout row="3" class="input-field">
+                    <Label text="Vehicle Plate" textWrap="true"></Label>
+                    <TextField class="input" 
+                         autocorrect="false"
+                        autocapitalizationType="none" ></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+                <StackLayout row="4" class="input-field">
+                    <Label text="Penaltyfee Price" textWrap="true"></Label>
+                    <TextField class="input" 
+                         autocorrect="false"
+                        autocapitalizationType="none" ></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+               
+            </GridLayout>
+
+            <Button [isEnabled]="!isBusy" text="Save" (tap)="submit()"  class="-outline -rounded-lg m-t-20"></Button>
+        
+    </StackLayout>
+
+</FlexboxLayout>

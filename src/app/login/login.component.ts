@@ -56,6 +56,16 @@ export class LoginComponent  {
         )
   }
 
+
+  multa(){
+
+    this.router.navigate(['/multa',{clearHistory:true}]);
+
+
+
+
+  }
+
   alert(message: string) {
       return alert({
           title: "Error",
