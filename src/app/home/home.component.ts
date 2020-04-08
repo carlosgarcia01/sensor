@@ -55,7 +55,10 @@ export class HomeComponent implements OnInit {
     getPerson(){
 
         this.peopleService.getUser(this.document)
-                    .subscribe(res=> this.person=res);
+                    .subscribe(res=> {
+                        this.person=res
+                        console.log(res)
+                    });
 
     }
     onBusyChanged(args: EventData) {
