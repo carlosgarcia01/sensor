@@ -1,0 +1,33 @@
+<GridLayout>
+
+    <ListView [items]= "penaltyfees" >
+        <ng-template let-item= "item">
+            <GridLayout>
+                <StackLayout>
+                <Label text="Name:"></Label>
+                <Label [text]="item.name"></Label>
+
+                <Label text="Price:"></Label>
+                <label [text]="item.price" ></label>
+
+                <Label text="Date:"></Label>
+                <label [text]="item.date" ></label>
+
+                <Label text="Vehicleplate:"></Label>
+                <label [text]="item.vehicleplate" ></label>
+
+                
+            </StackLayout>
+            
+            </GridLayout>
+            
+        </ng-template>
+        
+    </ListView>
+
+
+
+    
+    
+
+</GridLayout>

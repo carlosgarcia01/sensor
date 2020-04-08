@@ -1,0 +1,50 @@
+/* Add mobile styles for the component here.  */
+
+.page {
+    align-items: center;
+    flex-direction: column;
+  }
+  .form {
+    margin-left: 30;
+    margin-right: 30;
+    flex-grow: 2;
+    vertical-align: middle;
+  }
+  
+  .header {
+    
+    font-size: 25;
+    font-weight: 600;
+    margin: 70 0 150 0;
+    text-align: center;
+    color: rgb(43, 162, 209);
+  }
+  .text {
+    
+    font-size: 20;
+    font-weight: 600;
+    margin-bottom: 150;
+    text-align: center;
+    color: rgb(110, 97, 97);
+  }
+  
+  .input-field {
+    margin-bottom: 25;
+  }
+  .input {
+    font-size: 18;
+   
+  }
+  .input:disabled {
+    background-color: white;
+    opacity: 0.5;
+  }
+  
+  .btn-primary {
+    margin: 30 5 15 5;
+  }
+  
+
+  .bold {
+    color:cornflowerblue; 
+  }

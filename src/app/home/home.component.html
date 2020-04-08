@@ -9,36 +9,26 @@
     </ActionItem>
 </ActionBar>
 
-<GridLayout>
-
-    <ListView [items]= "penaltyfees" >
-        <ng-template let-item= "item">
-            <GridLayout>
-                <StackLayout>
-                <Label text="Name:"></Label>
-                <Label [text]="item.name"></Label>
-
-                <Label text="Price:"></Label>
-                <label [text]="item.price" ></label>
-
-                <Label text="Date:"></Label>
-                <label [text]="item.date" ></label>
-
-                <Label text="Vehicleplate:"></Label>
-                <label [text]="item.vehicleplate" ></label>
-
-                
-            </StackLayout>
+<FlexboxLayout class="page">
+    <GridLayout rows="auto,auto" class="form">
+        <StackLayout row="0" class="input-field">
+            <Label class="header" text="Alcoholimetro" ></Label>
+            <Label class="text" text="Cuando comience el analisis, por favor, sople fuerte hacia el sensor" textWrap="true"></Label>
+        </StackLayout>
+        <StackLayout row="1" class="input-field">
+            <TextField class="input" hint="Enter document" 
+            keyboardType="number" autocorrect="false"
+            autocapitalizationType="none" [(ngModel)]="document"></TextField>
             
-            </GridLayout>
-            
-        </ng-template>
-        
-    </ListView>
+            <Button text="Begin Test" (tap)="getPerson()"
+                    class="-outline -rounded-lg m-t-20"></Button>
+        </StackLayout>
+
+    </GridLayout>
+</FlexboxLayout>
 
 
 
-    
-    
 
-</GridLayout>
+
+
