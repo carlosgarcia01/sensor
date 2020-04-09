@@ -7,6 +7,7 @@
                     <Label text="Name" textWrap="true"></Label>
                     <TextField class="input" 
                          autocorrect="false"
+                         [(ngModel)]="person.name"
                         autocapitalizationType="none" ></TextField>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
@@ -15,6 +16,7 @@
                     <Label text="Last Name" textWrap="true"></Label>
                     <TextField class="input" 
                          autocorrect="false"
+                         [(ngModel)]="person.lastname"
                         autocapitalizationType="none" ></TextField>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
@@ -23,6 +25,7 @@
                     <Label text="Document" textWrap="true"></Label>
                     <TextField class="input" 
                          autocorrect="false"
+                         [(ngModel)]="person.document"
                         autocapitalizationType="none" ></TextField>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
@@ -46,7 +49,7 @@
                
             </GridLayout>
 
-            <Button [isEnabled]="!isBusy" text="Save" (tap)="submit()"  class="-outline -rounded-lg m-t-20"></Button>
+            <Button  text="Save" class="-outline -rounded-lg m-t-20"></Button>
         
     </StackLayout>
 

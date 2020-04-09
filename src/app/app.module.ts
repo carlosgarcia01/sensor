@@ -11,11 +11,8 @@ import {NativeScriptFormsModule} from 'nativescript-angular/forms';
 
  // Uncomment and add to NgModule imports if you need to use the HttpClient wrapper 
  import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
-<<<<<<< HEAD
-import { PenaltyfeeComponent } from './penaltyfee/penaltyfee.component';
-=======
-import { PenaltyfeeListComponent } from './penaltyfee-list/penaltyfee-list.component';
->>>>>>> 1899aacf3604888663ddfa521b92ad032b2ad22f
+ import { PenaltyfeeComponent } from './penaltyfee/penaltyfee.component';
+ import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -31,11 +28,8 @@ import { PenaltyfeeListComponent } from './penaltyfee-list/penaltyfee-list.compo
     declarations: [
         AppComponent,
         LoginComponent,
-<<<<<<< HEAD
-        PenaltyfeeComponent
-=======
-        PenaltyfeeListComponent
->>>>>>> 1899aacf3604888663ddfa521b92ad032b2ad22f
+        PenaltyfeeComponent,
+        TestComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

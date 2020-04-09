@@ -16,14 +16,15 @@
             <Label class="text" text="Cuando comience el analisis, por favor, sople fuerte hacia el sensor" textWrap="true"></Label>
         </StackLayout>
         <StackLayout row="1" class="input-field">
-            <TextField class="input" hint="Enter document" 
+            <TextField class="input"
+             [(ngModel)]="document"
+             hint="Enter document" 
             keyboardType="number" autocorrect="false"
-            autocapitalizationType="none" [(ngModel)]="document"></TextField>
+            autocapitalizationType="none" ></TextField>
             
-            <Button text="Begin Test" (tap)="getPerson()"
+            <Button text="Begin Test" [nsRouterLink]="['/penaltyfee',document]"
                     class="-outline -rounded-lg m-t-20"></Button>
         </StackLayout>
-
     </GridLayout>
 </FlexboxLayout>
 
