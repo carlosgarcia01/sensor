@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
     constructor(private router:RouterExtensions, 
                 private userService : UserService,
                 ) {
-        // Use the component constructor to inject providers.
     }
 
  
