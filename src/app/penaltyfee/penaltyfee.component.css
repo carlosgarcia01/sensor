@@ -1,13 +1,16 @@
 /* Add mobile styles for the component here.  */
 /* Add mobile styles for the component here.  */
-
+html{
+  font-size: 16px;
+}
 .page {
     align-items: center;
     flex-direction: column;
   }
   .form {
-    margin-left: 30;
-    margin-right: 30;
+    font-size: 16px;
+    margin-left: 2em;
+    margin-right: 2rem;
     flex-grow: 2;
     vertical-align: middle;
   }
@@ -19,15 +22,21 @@
   }
   .header {
     
-    font-size: 25;
+    font-size: 25px;
     font-weight: 600;
-    margin: 35 0;
+    margin-top: 4em;
+    margin-bottom: 60em;
     text-align: center;
-    color: #A8A8A8;
+    color: rgb(43, 162, 209);
   }
+
+  label{
+    color: rgb(43, 162, 209);
+  }  
   
+
   .input-field {
-    margin-bottom: 25;
+    margin-bottom: 10rem;
   }
   .input {
     font-size: 18;
@@ -39,7 +48,8 @@
   }
   
   .btn-primary {
-    margin: 30 5 15 5;
+    font-size: 16px;
+    margin: 2em 0.25em 1em 0.25em;
   }
   
   .login-label {
@@ -50,8 +60,5 @@
   }
   .sign-up-label {
     margin-bottom: 20;
-  }
-  .bold {
-    color:cornflowerblue; 
   }
   

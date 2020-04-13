@@ -47,7 +47,7 @@ export class PenaltyfeeComponent implements OnInit {
         this.route.activatedRoute.subscribe(res =>res.params.subscribe(res => document=res.document));
         this.peopleService.getUser(document)
         .subscribe((res:any) => 
-            {this.person=res.person
+            {this.person=res.person[0]
             console.log(res)}
             
         ); 
