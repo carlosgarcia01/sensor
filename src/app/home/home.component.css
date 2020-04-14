@@ -8,7 +8,7 @@ html{
   }
   .form {
     font-size: 16px;
-    margin-left: 2em;
+    margin-left: 2rem;
     margin-right: 2rem;
     flex-grow: 2;
     vertical-align: middle;
@@ -19,14 +19,14 @@ html{
     font-size: 25px;
     font-weight: 600;
     margin-top: 4em;
-    margin-bottom: 180em;
+    margin-bottom: 180rem;
     text-align: center;
     color: rgb(43, 162, 209);
   }
   .text {
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 150em;
+    margin-bottom: 150rem;
     text-align: center;
     color: rgb(142, 155, 170);
   }
@@ -41,11 +41,6 @@ html{
   .input:disabled {
     background-color: white;
     opacity: 0.5;
-  }
-  
-  .btn-primary {
-    font-size: 16px;
-    margin: 2em 0.25em 1em 0.25em;
   }
   
 
