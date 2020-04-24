@@ -21,7 +21,8 @@
              hint="Enter document" 
             keyboardType="number" autocorrect="false"
             autocapitalizationType="none" ></TextField>
-            <Button text="Begin Test" [nsRouterLink]="['/penaltyfee',document]"
+            <ActivityIndicator rowspan="2" [busy]="isBusy" color="#365a95" width="100" height="100" ></ActivityIndicator>
+            <Button text="Begin Test"  [isEnabled]="!isBusy" (tap)="sendDocument()" 
                     class="-outline -rounded-lg m-t-20"></Button>
         </StackLayout>
     </GridLayout>
