@@ -16,20 +16,20 @@ html{
   .header {
     
     margin-top: 4rem;
-    margin-bottom: 180rem;
+    margin-bottom: 100rem;
     text-align: center;
     color: rgb(43, 162, 209);
   }
   .text {
     
     font-size: 20rem;
-    margin-bottom: 100rem;
+    margin-bottom: 50rem;
     text-align: center;
     color: rgb(142, 155, 170);
   }
   
   .input-field {
-    margin-bottom: 100rem;
+    margin-bottom: 50rem;
   }
   .input {
     font-size: 18;
