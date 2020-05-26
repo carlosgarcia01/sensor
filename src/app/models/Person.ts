@@ -1,4 +1,5 @@
 export class Person {
+    _id:string;
     contact:string;
     document:string
     name:string
@@ -8,6 +9,7 @@ export class Person {
     password:string;
 
     constructor(){
+        this._id=""
         this.contact="";
         this.document="";
         this.name="";

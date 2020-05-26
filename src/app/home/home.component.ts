@@ -26,7 +26,11 @@ export class HomeComponent implements OnInit {
     constructor(private router:RouterExtensions, 
                 private peopleService: PeopleService,
                 private rfidService:RfidService
-                ) {
+                ) 
+                {
+                (peopleService.person)? 
+                        this.document=peopleService.person.document:
+                        this.document="1053"
     }
 
  
@@ -71,17 +75,6 @@ export class HomeComponent implements OnInit {
                     this.isBusy=false;
                     return;
                 }
-
-/* 
-                    if(res.user[0]){
-                        this.router.navigate(['/penaltyfee',this.document],{clearHistory:true}); 
-                        this.isBusy=false;
-                        return;
-                    }else{
-                        this.alert('Please, Enter Document other');
-                        this.isBusy=false;
-                        return;
-                    } */
             }); 
 
         }else{

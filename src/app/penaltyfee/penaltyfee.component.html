@@ -59,13 +59,11 @@
                         autocapitalizationType="none" ></TextField>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
-
-
-
+                <ActivityIndicator rowspan="2" [busy]="isBusy" color="#365a95" width="100" height="100" ></ActivityIndicator>
                
             </GridLayout>
 
-            <Button  text="Save" (tap)="save()" class="-outline -rounded-lg" ></Button>
+            <Button  text="Save" (tap)="save()" [isEnabled]="!isBusy" class="-outline -rounded-lg" ></Button>
         
     </StackLayout>
 
