@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
     isBusy: boolean = false;
 
     constructor(private router:RouterExtensions, 
-                private userService : UserService,
                 private peopleService: PeopleService,
                 ) {
     }
@@ -44,15 +43,30 @@ export class HomeComponent implements OnInit {
         this.router.navigate(['/camera'],{clearHistory:true}); 
     }
 
+    getRegisters(){
+        this.router.navigate(['/registers'],{clearHistory:true}); 
+    }
+
 
     sendDocument(){
         this.isBusy=true;
-        console.log(this.document)
         if(this.document.length>0){
 
            this.peopleService.getUser(this.document)
             .subscribe((res:any) => {
-                    if(res.person[0]){
+                if(res.user[0]){
+                    this.peopleService.person = res.user[0];
+                    this.isBusy=false;
+                    this.router.navigate(['/penaltyfee'],{clearHistory:true});
+                    return;
+                }else{
+                    this.alert('Please, Enter Document other');
+                    this.isBusy=false;
+                    return;
+                }
+
+/* 
+                    if(res.user[0]){
                         this.router.navigate(['/penaltyfee',this.document],{clearHistory:true}); 
                         this.isBusy=false;
                         return;
@@ -60,7 +74,7 @@ export class HomeComponent implements OnInit {
                         this.alert('Please, Enter Document other');
                         this.isBusy=false;
                         return;
-                    }
+                    } */
             }); 
 
         }else{

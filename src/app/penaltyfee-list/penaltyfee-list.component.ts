@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PenaltyfeeService } from '../shared/penaltyfee.service';
+import { RegisterService } from '../shared/register.service';
+import { RouterExtensions } from 'nativescript-angular/router';
 
 @Component({
   selector: 'ns-penaltyfee-list',
@@ -8,18 +10,22 @@ import { PenaltyfeeService } from '../shared/penaltyfee.service';
 })
 export class PenaltyfeeListComponent implements OnInit {
 
-  penaltyfees:Array<string>;
+  registers:Array<string>;
 
-  constructor(private _penaltyfeeService:PenaltyfeeService) { }
+  constructor(private _registerService:RegisterService,
+              private router:RouterExtensions) { }
 
   ngOnInit(): void {
 
-    this._penaltyfeeService.getPenaltyfee()
+    this._registerService.getRegisters()
     .subscribe((result:any) =>{
-        console.log(result);
-        this.penaltyfees=result.penaltyfees
+        this.registers=result.registers
     })
 
+  }
+
+  goBack(){
+      this.router.navigate(['/home'],{clearHistory:true});
   }
 
 }

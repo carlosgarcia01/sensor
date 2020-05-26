@@ -1,15 +1,20 @@
 export class Person {
-    phone:string;
+    contact:string;
     document:string
     name:string
     lastname:string
-    age:Number;
+    occupation:string;
+    email:string;
+    password:string;
 
     constructor(){
-        this.phone="";
+        this.contact="";
         this.document="";
         this.name="";
         this.lastname="";
-        this.age=0;
+        this.occupation="";
+        this.email="";
+        this.password="";
+        
     }
 }

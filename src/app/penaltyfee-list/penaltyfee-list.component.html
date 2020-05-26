@@ -1,33 +1,32 @@
+<ActionBar title="Registros">
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap) ="goBack()"></NavigationButton>
+</ActionBar>
+
 <GridLayout>
 
-    <ListView [items]= "penaltyfees" >
-        <ng-template let-item= "item">
+    <ListView [items]="registers">
+        <ng-template let-item="item">
             <GridLayout>
                 <StackLayout>
-                <Label text="Name:"></Label>
-                <Label [text]="item.name"></Label>
+                    <Label text="Document:"></Label>
+                    <Label [text]="item.document"></Label>
 
-                <Label text="Price:"></Label>
-                <label [text]="item.price" ></label>
+                    <Label text="description:"></Label>
+                    <label [text]="item.description"></label>
 
-                <Label text="Date:"></Label>
-                <label [text]="item.date" ></label>
+                    <Label text="registerDate:"></Label>
+                    <label [text]="item.registerDate"></label>
+                </StackLayout>
 
-                <Label text="Vehicleplate:"></Label>
-                <label [text]="item.vehicleplate" ></label>
-
-                
-            </StackLayout>
-            
             </GridLayout>
-            
+
         </ng-template>
-        
+
     </ListView>
 
 
 
-    
-    
+
+
 
 </GridLayout>

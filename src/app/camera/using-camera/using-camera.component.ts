@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ImageAsset } from "tns-core-modules/image-asset";
 import { takePicture, requestPermissions, isAvailable } from "nativescript-camera";
+import { RouterExtensions } from 'nativescript-angular/router';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class UsingCameraComponent implements OnInit {
   public width: number = 300;
   public height: number = 300;
 
-  constructor() { }
+  constructor(private router:RouterExtensions) { }
 
   ngOnInit(): void {
   }
@@ -51,6 +52,9 @@ onRequestPermissions() {
 onCheckForCamera() {
     let isCameraAvailable = isAvailable();
     console.log("Is camera hardware available: " + isCameraAvailable);
+}
+goBack(){
+    this.router.navigate(['/home'],{clearHistory:true});
 }
 
 }

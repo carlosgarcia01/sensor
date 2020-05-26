@@ -1,8 +1,11 @@
+<ActionBar title="Profile">
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap) ="goBack()"></NavigationButton>
+</ActionBar>
 <FlexboxLayout class="page">
     <StackLayout class="form">
-        <Label class="header" text="SENSOR"></Label>
+        
 
-            <GridLayout rows="auto, auto,auto,auto,auto">
+            <GridLayout rows="auto, auto,auto,auto,auto,auto">
                 <StackLayout row="0" class="input-field">
                     <Label text="Name" textWrap="true"></Label>
                     <TextField class="input" 
@@ -31,25 +34,38 @@
                 </StackLayout>
 
                 <StackLayout row="3" class="input-field">
-                    <Label text="Vehicle Plate" textWrap="true"></Label>
+                    <Label text="Phone" textWrap="true"></Label>
                     <TextField class="input" 
                          autocorrect="false"
+                         [(ngModel)]="person.contact"
                         autocapitalizationType="none" ></TextField>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
 
                 <StackLayout row="4" class="input-field">
-                    <Label text="Penaltyfee Price" textWrap="true"></Label>
+                    <Label text="Email" textWrap="true"></Label>
                     <TextField class="input" 
                          autocorrect="false"
+                         [(ngModel)]="person.email"
                         autocapitalizationType="none" ></TextField>
                     <StackLayout class="hr-light"></StackLayout>
                 </StackLayout>
 
+                <StackLayout row="5" class="input-field">
+                    <Label text="Occupation" textWrap="true"></Label>
+                    <TextField class="input" 
+                         autocorrect="false"
+                         [(ngModel)]="person.occupation"
+                        autocapitalizationType="none" ></TextField>
+                    <StackLayout class="hr-light"></StackLayout>
+                </StackLayout>
+
+
+
                
             </GridLayout>
 
-            <Button  text="Save" class="-outline -rounded-lg" ></Button>
+            <Button  text="Save" (tap)="save()" class="-outline -rounded-lg" ></Button>
         
     </StackLayout>
 

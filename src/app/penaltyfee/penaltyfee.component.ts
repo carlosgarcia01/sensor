@@ -7,7 +7,7 @@ import {
 } from "tns-core-modules/ui/page";
 
 import {
-  PageRoute
+  PageRoute, RouterExtensions
 } from 'nativescript-angular/router';
 
 import {
@@ -30,11 +30,13 @@ export class PenaltyfeeComponent implements OnInit {
 
     constructor(private page: Page,
         private peopleService: PeopleService,
-        private route:PageRoute) 
+        private route:PageRoute,
+        private router:RouterExtensions) 
         {
-        this.page.actionBarHidden = true;
+        this.page.actionBarHidden = false;
         this.person=new Person();
-        this.getPerson();
+        this.person=this.peopleService.person;
+        
 
         }
 
@@ -42,17 +44,16 @@ export class PenaltyfeeComponent implements OnInit {
 
     }
 
-     getPerson(){
-        let document;
-        this.route.activatedRoute.subscribe(res =>res.params.subscribe(res => document=res.document));
-        this.peopleService.getUser(document)
-        .subscribe((res:any) => 
-            {this.person=res.person[0]
-            console.log(res)}
-            
-        ); 
-        console.log(this.person)
+
+    save(){
+        
     }
+
+    goBack(){
+        this.router.navigate(['/home'],{clearHistory:true});
+    }
+
+
 
 
 }

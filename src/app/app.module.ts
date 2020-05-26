@@ -13,7 +13,7 @@ import {NativeScriptFormsModule} from 'nativescript-angular/forms';
  import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
  import { PenaltyfeeComponent } from './penaltyfee/penaltyfee.component';
  import { TestComponent } from './test/test.component';
-
+ import { PenaltyfeeListComponent } from './penaltyfee-list/penaltyfee-list.component'
 
 @NgModule({
     bootstrap: [
@@ -29,7 +29,8 @@ import {NativeScriptFormsModule} from 'nativescript-angular/forms';
         AppComponent,
         LoginComponent,
         PenaltyfeeComponent,
-        TestComponent
+        TestComponent,
+        PenaltyfeeListComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

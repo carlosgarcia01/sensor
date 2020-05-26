@@ -14,9 +14,9 @@ html{
   }
   
   .header {
-    
+    font-size: 40rem;
     margin-top: 4rem;
-    margin-bottom: 180rem;
+    margin-bottom: 150rem;
     text-align: center;
     color: rgb(43, 162, 209);
   }
@@ -28,9 +28,11 @@ html{
     color: rgb(142, 155, 170);
   }
   
-  .input-field {
-    margin-bottom: 100rem;
-  }
+ /*  .input-field {
+    margin-bottom: 50rem;
+    
+  } */
+
   .input {
     font-size: 18;
    
