@@ -16,14 +16,15 @@ html{
   .header {
     font-size: 40rem;
     margin-top: 4rem;
-    margin-bottom: 150rem;
+
+    margin-bottom: 100rem;
     text-align: center;
     color: rgb(43, 162, 209);
   }
   .text {
     
     font-size: 20rem;
-    margin-bottom: 100rem;
+    margin-bottom: 50rem;
     text-align: center;
     color: rgb(142, 155, 170);
   }
