@@ -7,6 +7,7 @@ import { clear } from "tns-core-modules/application-settings";
 import { EventData } from "tns-core-modules/ui/page/page";
 import { ActivityIndicator } from "tns-core-modules/ui/activity-indicator/activity-indicator";
 import { PeopleService } from "../shared/people.service";
+import { RfidService } from "../shared/rfid.service";
 
 
 
@@ -24,6 +25,7 @@ export class HomeComponent implements OnInit {
 
     constructor(private router:RouterExtensions, 
                 private peopleService: PeopleService,
+                private rfidService:RfidService
                 ) {
     }
 
@@ -45,6 +47,11 @@ export class HomeComponent implements OnInit {
 
     getRegisters(){
         this.router.navigate(['/registers'],{clearHistory:true}); 
+    }
+
+    changeState(state:string){
+       let result= this.rfidService.putRfid(state).subscribe();
+       //console.log(result)
     }
 
 
